@@ -7,8 +7,8 @@ game_files.sort()
 
 games_frames = []
 for game_file in game_files:
-    games_frame = pd.read_csv(game_file, names=
-    ['type', 'multi2', 'multi3', 'multi4', 'multi5', 'multi6', 'event'])
+    games_frame = pd.read_csv(game_file, names=['type', 'multi2', 'multi3', 
+    'multi4', 'multi5', 'multi6', 'event'])
     games_frames.append(games_frame)
 
 games = pd.concat(games_frames)
