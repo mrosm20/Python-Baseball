@@ -4,8 +4,6 @@ import pandas as pd
 
 game_files = glob.glob(os.path.join(os.getcwd(), 'games', '*.EVE'))
 
-
-
 games_frames = []
 for game_file in game_files:
     games_frame = pd.read_csv(game_file, names=
