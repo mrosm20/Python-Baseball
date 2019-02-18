@@ -5,13 +5,13 @@ import pandas as pd
 game_files = glob.glob(os.path.join(os.getcwd(), 'games', '*.EVE'))
 game_files.sort()
 
-games_frames = []
+game_frames = []
 for game_file in game_files:
-    games_frame = pd.read_csv(game_file, names=['type', 'multi2', 'multi3', 
+    game_frame = pd.read_csv(game_file, names=['type', 'multi2', 'multi3', 
     'multi4', 'multi5', 'multi6', 'event'])
-    games_frames.append(games_frame)
+    game_frames.append(game_frame)
 
-games = pd.concat(games_frames)
+games = pd.concat(game_frames)
 
 games.loc[games['multi5'] == '??', 'multi5'] = ''
 
